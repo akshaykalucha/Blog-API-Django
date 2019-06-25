@@ -1,0 +1,8 @@
+{% extends 'blogweb/base.htm' %}
+{% block content %}
+<small class="text-muted date">{{ object.date_posted|date:"F d, Y" }}</small>
+<p class="objtitle">{{ object.title }}</p>
+<section class="postcontent">
+    <p>{{ object.content|safe }}</p>
+</section>
+{% endblock %}

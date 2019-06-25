@@ -1,0 +1,23 @@
+{% extends 'blogweb/base.htm' %}
+{% block content %}
+{% for post in posts %}
+<div class="fm-card">
+    <div class="fm-card-header">
+        <img src="{{ post.title_image.url }}" alt="https://www.knowkenny.com/blog/2018/9/11/gousa">
+    </div>
+    <div class="fm-card-content">
+        <div class="title">
+            <a href="">{{ post.title }}</a>
+        </div>
+        <div class="summary">
+            <p>{{ post.showcase }}</p>
+        </div>
+        <div class="continue">
+            <a href="{% url 'post' post.id %}">continue &rarr;</a>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
